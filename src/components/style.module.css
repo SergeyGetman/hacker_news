@@ -1,0 +1,73 @@
+.pending {
+    background-color: #c52542;
+    height: 300px;
+    width: 100%;
+    color: #e0d0d7;
+}
+
+.checkbox{
+    background-color: #d7b474;
+    color: #111010;
+    font-size: 20px;
+    height: 10rem;
+    width: 30rem;
+    margin-left: 35%;
+    border-radius: 20px;
+    border: 2px solid #0cdede;
+    text-align: center;
+}
+.checkbox_active {
+    background-color: #40cc55;
+    color: white;
+    height: 10rem;
+    width: 10rem;
+}
+.timezone{
+    color: white;
+    background: linear-gradient(#e66465, #9198e5);
+    height: 140px;
+    width: 600px;
+    font-size: 30px;
+    margin-left: 33%;
+    margin-top: 60px;
+    border-radius: 50%;
+}
+input{
+    height: 30px;
+    font-size: 20px;
+    border-radius: 20px;
+    width: 400px;
+}
+
+.buttons{
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 40px 40px #f110cc inset, 0 0 0 0 #3ec6d9;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: white;
+    transition: .15s ease-in-out;
+    cursor: pointer;
+    margin-right: 60rem;
+}
+
+.images__list {
+    height: 120px;
+    width: 100px;
+    position: relative;
+}
+.images__list_avatar {
+    background-image: url("../images/x2/Ramka.png");
+    height : 240px;
+    width : 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.position__images{
+    background-color: rgba(67, 200, 231, 0.43);
+    display: flex;
+}

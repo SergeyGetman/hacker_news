@@ -36,3 +36,31 @@
     transform: rotate(360deg);
   }
 }
+body{
+  background-color: #111010;
+}
+
+.state{
+  margin-top: 20px;
+  background-color: #b3d4da;
+  font-size: 30px;
+  font-weight: bold;
+  color: #4dc772;
+}
+
+.reflinks {
+  font-size: 30px;
+  color: #6060bb;
+}
+h1{
+  font-family: 'Rubik One', sans-serif;
+  font-size: 50px;
+  text-transform: uppercase;
+  background: #2E2F45;
+  display: table;
+  margin: 20px auto;
+  color: white;
+  border-radius: 5px;
+  mix-blend-mode: multiply;
+  padding: 5px 10px;
+}
