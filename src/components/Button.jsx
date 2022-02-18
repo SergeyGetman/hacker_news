@@ -4,7 +4,7 @@ import cl from './style.module.css'
 const Button = () => {
   return (
     <div>
-      <button className={cl.buttons} type='button'>ADD</button>
+      <button className={cl.buttons} type='button'>REGISTRED</button>
     </div>
   );
 };

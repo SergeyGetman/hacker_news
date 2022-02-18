@@ -14,15 +14,16 @@ import {
 } from "react-router-dom";
 import {Imageslist} from "./components/Imageslist";
 import backGroundImage from './images/1184.png'
+import Registration from "./components/Registration";
 
 
 function App({props : props}) {
-
   return (
     <Router>
     <div className={classes.App}>
       <h1>Welcome to Sergo</h1>
       <Button />
+
           <ul>
             <li className={classes.reflinks}>
               <Link to="/">Home</Link>
@@ -35,6 +36,9 @@ function App({props : props}) {
             </li>
             <li className={classes.reflinks}>
               <Link to="/images">Images</Link>
+            </li>
+            <li className={classes.reflinks}>
+              <Link to="/registed">Registed</Link>
             </li>
           </ul>
           <hr />
@@ -65,6 +69,9 @@ function App({props : props}) {
                   padding: "1rem"
                 }
               }/>
+            </Route>
+            <Route path="/registed">
+              <Registration />
             </Route>
           </Switch>
             </div>
