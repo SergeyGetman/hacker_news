@@ -71,3 +71,16 @@ input{
     background-color: rgba(67, 200, 231, 0.43);
     display: flex;
 }
+
+.formik_validation{
+    background: #1fcbcb;
+    opacity: .8;
+}
+.formik_button{
+    height: 60px;
+    width: 200px;
+    background: #f110cc;
+    color: wheat;
+    font-weight: bold;
+    border-radius: 20%;
+}

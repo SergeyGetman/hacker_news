@@ -1,10 +1,21 @@
 import React from 'react';
 import {Formik} from "formik";
 import * as yup from 'yup'
+import cl from './style.module.css'
 
 const Registration = () => {
+
+    const validetionShema = yup.object().shape({
+        name: yup.string().typeError('Должно быть строкой').required('Введите ваше имя '),
+        secondName: yup.string().typeError('Должно быть строкой').required('Введие фамилию '),
+        password: yup.string().typeError('Должно быть строкой').required('Введие пароль '),
+        confirmPassword: yup.string().oneOf([yup.ref('password')], 'Пароли не совпадают').required('Введите пароль '),
+        email: yup.string().email('Введите верный эмейл').required('Введите эмейл '),
+        confirmEmail: yup.string().oneOf([yup.ref('email')],'Эмейлы не совпадают').required('Введите эмейл '),
+    })
+
     return (
-        <div>
+        <div className={cl.formik_validation}>
             <Formik
                 initialValues={{
                 name: '',
@@ -16,6 +27,7 @@ const Registration = () => {
             }}
                 validateOnblur
                 onSubmit={(values) => {console.log(values)}}
+                validationSchema={validetionShema}
             >
                 {({values, errors, touched,
                       handleChange, handleBlur, isValid,
@@ -31,8 +43,63 @@ const Registration = () => {
                                   value={values.name}
                               />
                           </p>
-                          {touched.name && errors.name && <p>{errors.name}</p> }
-                          <button
+                          {touched.name && errors.name && <p style={{color : 'red'}}>{errors.name}</p>}
+                          <p>
+                              <label htmlFor="secondName">Surname</label><br/>
+                              <input
+                                  type='text'
+                                  name='secondName'
+                                  onChange={handleChange}
+                                  onBlur={handleBlur}
+                                  value={values.secondName}
+                              />
+                          </p>
+                          {touched.secondName && errors.secondName && <p style={{color : 'red'}}>{errors.secondName}</p>}
+                          <p>
+                              <label htmlFor="password">Password</label><br/>
+                              <input
+                                  type='password'
+                                  name='password'
+                                  onChange={handleChange}
+                                  onBlur={handleBlur}
+                                  value={values.password}
+                              />
+                          </p>
+                          {touched.password && errors.password && <p style={{color : 'red'}}>{errors.password}</p>}
+                          <p>
+                              <label htmlFor="confirmPassword">Confirm Password</label><br/>
+                              <input
+                                  type='password'
+                                  name='confirmPassword'
+                                  onChange={handleChange}
+                                  onBlur={handleBlur}
+                                  value={values.confirmPassword}
+                              />
+                          </p>
+                          {touched.confirmPassword && errors.confirmPassword && <p style={{color : 'red'}}>{errors.confirmPassword}</p>}
+                          <p>
+                              <label htmlFor="email">Email</label><br/>
+                              <input
+                                  type='email'
+                                  name='email'
+                                  onChange={handleChange}
+                                  onBlur={handleBlur}
+                                  value={values.email}
+                              />
+                          </p>
+                          {touched.email && errors.email && <p style={{color : 'red'}}>{errors.email}</p>}
+                          <p>
+                              <label htmlFor="confirmEmail">Confirm Email</label><br/>
+                              <input
+                                  type='email'
+                                  name='confirmEmail'
+                                  onChange={handleChange}
+                                  onBlur={handleBlur}
+                                  value={values.confirmEmail}
+                              />
+                          </p>
+                          {touched.confirmEmail && errors.confirmEmail && <p style={{color : 'red'}}>{errors.confirmEmail}</p>}
+                          <button className={cl.formik_button}
                               disabled={!isValid && !dirty}
                               onClick={handleSubmit}
                               type='submit'
