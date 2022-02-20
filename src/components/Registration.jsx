@@ -34,7 +34,7 @@ const Registration = () => {
                   handleSubmit, dirty}) => (
                       <div>
                           <p>
-                              <label htmlFor="name">Name</label><br/>
+                              <label htmlFor="name" className={cl.label_form}> name</label>
                               <input
                                   type='text'
                                   name='name'
@@ -45,7 +45,7 @@ const Registration = () => {
                           </p>
                           {touched.name && errors.name && <p style={{color : 'red'}}>{errors.name}</p>}
                           <p>
-                              <label htmlFor="secondName">Surname</label><br/>
+                              <label htmlFor="secondName" className={cl.label_form}>surname</label><br/>
                               <input
                                   type='text'
                                   name='secondName'
@@ -56,7 +56,7 @@ const Registration = () => {
                           </p>
                           {touched.secondName && errors.secondName && <p style={{color : 'red'}}>{errors.secondName}</p>}
                           <p>
-                              <label htmlFor="password">Password</label><br/>
+                              <label htmlFor="password" className={cl.label_form}>password</label><br/>
                               <input
                                   type='password'
                                   name='password'
@@ -67,7 +67,7 @@ const Registration = () => {
                           </p>
                           {touched.password && errors.password && <p style={{color : 'red'}}>{errors.password}</p>}
                           <p>
-                              <label htmlFor="confirmPassword">Confirm Password</label><br/>
+                              <label htmlFor="confirmPassword" className={cl.label_form_long}>confirm password</label><br/>
                               <input
                                   type='password'
                                   name='confirmPassword'
@@ -76,9 +76,9 @@ const Registration = () => {
                                   value={values.confirmPassword}
                               />
                           </p>
-                          {touched.confirmPassword && errors.confirmPassword && <p style={{color : 'red'}}>{errors.confirmPassword}</p>}
+                          {touched.confirmPassword && errors.confirmPassword && <p className={cl.label_form_errors}>{errors.confirmPassword}</p>}
                           <p>
-                              <label htmlFor="email">Email</label><br/>
+                              <label htmlFor="email" className={cl.label_form}>email</label><br/>
                               <input
                                   type='email'
                                   name='email'
@@ -89,7 +89,7 @@ const Registration = () => {
                           </p>
                           {touched.email && errors.email && <p style={{color : 'red'}}>{errors.email}</p>}
                           <p>
-                              <label htmlFor="confirmEmail">Confirm Email</label><br/>
+                              <label htmlFor="confirmEmail" className={cl.label_form_long}>confirm email</label><br/>
                               <input
                                   type='email'
                                   name='confirmEmail'
