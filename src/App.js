@@ -14,6 +14,7 @@ import {
 } from "react-router-dom";
 import {Imageslist} from "./components/Imageslist";
 import backGroundImage from './images/1184.png'
+import ShowModal from "./components/ShowModal";
 
 
 function App({props : props}) {

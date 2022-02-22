@@ -1,9 +1,16 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Formik} from "formik";
 import * as yup from 'yup'
 import cl from './style.module.css'
+import Button from "./Button";
+import ShowModal from "./ShowModal";
+import showModal from "./ShowModal";
 
 const Registration = () => {
+    const [state, setState] = useState(true)
+    if(!state){
+        return <Button />
+    }
 
     const validetionShema = yup.object().shape({
         name: yup.string().typeError('Должно быть строкой').required('Введите ваше имя '),
@@ -26,13 +33,16 @@ const Registration = () => {
                 confirmEmail: ''
             }}
                 validateOnblur
-                onSubmit={(values) => {console.log(values)}}
+                onSubmit={(values, {resetForm}) => {
+                return console.log(values), resetForm(), setState(!state)}}
                 validationSchema={validetionShema}
             >
                 {({values, errors, touched,
                       handleChange, handleBlur, isValid,
                   handleSubmit, dirty}) => (
                       <div>
+                          <div className={cl.close_modal}
+                               onClick={() => setState(!state)}> X</div>
                           <p>
                               <label htmlFor="name" className={cl.label_form}> name</label>
                               <input
