@@ -8,7 +8,6 @@ import ShowModal from "./ShowModal";
 
 const Registration = () => {
     const [showModal, setShowModal] = useState(false)
-    console.log('this is showModal', showModal)
     const [state, setState] = useState(true)
     if (!!showModal){
         return <ShowModal/>
@@ -16,8 +15,6 @@ const Registration = () => {
     if(!state){
         return <Button />
     }
-
-
 
 
     const validetionShema = yup.object().shape({
