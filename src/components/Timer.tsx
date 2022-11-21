@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import classes from './style.module.css'
 
-
 const Timer = () => {
   const timerNow = () => {
   return new Date().toLocaleString()
   }
+  
   const [state, setState] = useState(timerNow);
 
   useEffect(() => {

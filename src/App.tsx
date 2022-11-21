@@ -18,15 +18,10 @@ import Testregisrer from "./components/Testregisrer";
 
 
 
-function App({props : props}) {
-
-  console.log("this is props", {...props})
-
+function App({props : props}: any) {
+  
   const history = useHistory()
   const location = useLocation();
-  console.log('this is location', location.pathname)
-
-
 
   const goPath = () => {
     history.goBack('/foo')

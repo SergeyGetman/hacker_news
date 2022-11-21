@@ -1,17 +1,26 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux'
 import store from './redux/store';
-import {createBrowserHistory} from "history";
+import {BrowserHistory, createBrowserHistory} from "history";
 import {Router} from "react-router-dom";
 
 
-const history = createBrowserHistory()
+const history: BrowserHistory = createBrowserHistory()
 
-const objName = {
+export interface DefaultValue {
+  name: string;
+  age: number;
+  sex: string;
+  summary: Object;
+  country:? string[];
+  city:? Array<Object>;
+  namesImages:? Array<Object>;
+
+}
+
+const objName: DefaultValue = {
   name : "Sergo",
   age : 33,
   sex : 'man',
@@ -30,14 +39,12 @@ const objName = {
 
 
 ReactDOM.render(
-  <React.StrictMode>
+
     <Router history={history}>
     <Provider store={store} >
       <App props={objName}/>
     </Provider>
-    </Router>
-  </React.StrictMode>,
+    </Router>,
   document.getElementById('root')
 );
 
-reportWebVitals();

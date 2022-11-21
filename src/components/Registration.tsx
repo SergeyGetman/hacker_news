@@ -5,6 +5,11 @@ import cl from './style.module.css'
 import Button from "./Button";
 import ShowModal from "./ShowModal";
 
+export interface Prop {
+    onClick?: () => void;
+    validateOnblur?: () => void;
+}
+
 
 const Registration = () => {
     const [showModal, setShowModal] = useState(false)

@@ -1,17 +1,22 @@
-import React, {useCallback, useEffect, useMemo, useState} from 'react';
+import React, {ReactChild, useCallback, useEffect, useMemo, useState} from 'react';
 import classes from './style.module.css'
 
+export interface Conditions {
+  title?: string
+  title2?: string;
+  title3: string;
+}
 
-const conditions = {
+
+const conditions: Conditions = {
   title : 'this is tab checked',
   title2 : 'this is tab no checked',
    title3 : "this is new text3"
 }
 
-const Label = ({props : props}) => {
+const Label = ({props : props}: any) => {
   let country = props.country;
   const [state, setState] = useState(false);
-    console.log('this is state', state)
 
    useCallback(() => {
      setState(true)
@@ -29,7 +34,7 @@ const Label = ({props : props}) => {
       </form>
       <div>
         <ul>
-     {country.map((e, i) => {
+     {country.map((e : any, i : number) => {
       return  <li key={i}>{e}</li>
      })}
         </ul>

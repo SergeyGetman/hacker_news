@@ -6,10 +6,8 @@ import images4 from '../images/x2/ava-7.png'
 import images5 from '../images/x2/ava-6.png'
 import images8 from '../images/x2/ava-8.png'
 import images9 from '../images/x2/ava-9.png'
-import avatar from '../images/x2/Ramka.png'
 
 import classes from './style.module.css'
-import image1 from "../images/2 20.png";
 
 
 const imagesArray = [images1, images2, images3,images4, images5 ]
