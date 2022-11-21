@@ -4,12 +4,14 @@ import classes from './style.module.css'
 
 const conditions = {
   title : 'this is tab checked',
-  title2 : 'this is tab no checked'
+  title2 : 'this is tab no checked',
+   title3 : "this is new text3"
 }
 
 const Label = ({props : props}) => {
   let country = props.country;
   const [state, setState] = useState(false);
+    console.log('this is state', state)
 
    useCallback(() => {
      setState(true)
@@ -33,7 +35,7 @@ const Label = ({props : props}) => {
         </ul>
       </div>
       <div className={classes.checkbox}>
-        { state === true ? conditions.title : conditions.title2}
+        { state === true ? conditions.title + " " + conditions.title3 : conditions.title2}
       </div>
     </div>
   );

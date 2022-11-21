@@ -1,11 +1,11 @@
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
-import {AutoTabProvider} from "react-auto-tab";
 import {Foo} from './components/Inputson'
 import  classes from './App.module.css';
 import Label from "./components/Label";
 import Timer from "./components/Timer";
 import Button from "./components/Button";
-import cl from './App.module.css'
+import { useHistory, useLocation } from "react-router-dom";
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -14,15 +14,44 @@ import {
 } from "react-router-dom";
 import {Imageslist} from "./components/Imageslist";
 import backGroundImage from './images/1184.png'
-import ShowModal from "./components/ShowModal";
+import Testregisrer from "./components/Testregisrer";
+
 
 
 function App({props : props}) {
+
+  console.log("this is props", {...props})
+
+  const history = useHistory()
+  const location = useLocation();
+  console.log('this is location', location.pathname)
+
+
+
+  const goPath = () => {
+    history.goBack('/foo')
+  }
+
+  const [state, setState] = useState(0)
+  const [statemin, setStatemin] = useState(0)
+
+  const plusOne = () => {
+    setState(state + 1)
+  }
+  const minusOne = () => {
+    setStatemin(statemin - 1)
+  }
+
   return (
     <Router>
     <div className={classes.App}>
       <h1>- Pro 100 PortFoLio DeVeLoPeR -</h1>
       <Button/>
+              <h1>{state}</h1>
+              <h1>{statemin}</h1>
+            <button onClick={goPath}>Push plus One</button>
+            <button onClick={minusOne}>Push minus One</button>
+
 
           <ul>
             <li className={classes.reflinks}>
@@ -38,7 +67,7 @@ function App({props : props}) {
               <Link to="/images" className={classes.styles_title}>I.M.A.G.E.S :</Link>
             </li>
             <li className={classes.reflinks}>
-              <Link to="/registed">registed link</Link>
+              <Link to="/registed" className={classes.styles_title}>RegistratioN</Link>
             </li>
           </ul>
           <hr />
@@ -71,6 +100,7 @@ function App({props : props}) {
               }/>
             </Route>
             <Route path="/registed">
+              <Testregisrer />
             </Route>
           </Switch>
             </div>
