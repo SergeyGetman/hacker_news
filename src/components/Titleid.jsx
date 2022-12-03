@@ -10,6 +10,9 @@ const Titleid = () => {
     const id = Object.keys(arrayIdNumbers).sort((a,b) => a - b);
 
     return (
+        <div className={classes.tablestyle}>
+
+
         <table className={classes.tablenews}>
             {arrayIdNumbers.map((elem, idx) => {
                 return (
@@ -22,6 +25,7 @@ const Titleid = () => {
                 )
             })}
         </table>
+        </div>
     );
 };
 

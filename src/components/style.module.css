@@ -106,6 +106,7 @@ input{
 
 .position__images{
     display: flex;
+    margin-top: 400px;
 
 }
 
@@ -171,19 +172,26 @@ input{
 }
 .tablenews {
     background-color: transparent;
-    color: #0cdede;
+    color: black;
     text-transform: uppercase;
     border: 3px solid red;
     width: 100%;
-    display: grid;
     font-size: 20px;
     font-weight: 800;
     text-align: initial;
 }
 
+.tablestyle{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 table > td, td {
     border: 2px solid #22261b;
-    background-color: transparent;
+    background-color: #f36523;
 }
 table > td:hover{
     background-color: #b1b2b2;
