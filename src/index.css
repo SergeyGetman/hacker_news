@@ -5,7 +5,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url("https://c.wallhere.com/photos/1f/10/Synth_Retrowave_neon_cyberpunk_digital_art-1521173.jpg!d");
+  background-image: url("https://img.freepik.com/premium-photo/hacker-over-red-ladder-background-3d-render_295303-3632.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 100%;
 }
 
 code {

@@ -1,23 +1,15 @@
-const initialState = {
-  name: 'Sergey',
-  age: 18,
-  country: "",
-};
+import {SET_NEWS} from "./types";
 
+const initialState = {
+  news: []
+};
 
 
 const reducer = (state = initialState, action) => {
 
   switch (action.type) {
 
-    case "SET_COUNTRY" :
-      return  {...state, country : action.country}
-
-    case "SET_VALUE" :
-      return {...state, age : action.age}
-
-    case "INCREMENT" :
-      return {...state, age : state.age+1}
+    case SET_NEWS : return {...state, news : action.payload }
 
     default:
       return state;

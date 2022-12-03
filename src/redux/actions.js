@@ -1,10 +1,8 @@
-// export const setCity = (city) => ({
-//   type: 'SET_CITY',
-//   city: city,
-// });
 
-export const setCountry = (country) => ({
-  type: 'SET_COUNTRY',
-  country: country,
+import {SET_NEWS} from "./types";
 
-});
+
+export const setNews = (news) => ({
+  type: SET_NEWS,
+  payload: news
+})
