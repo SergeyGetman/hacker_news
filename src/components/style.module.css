@@ -88,12 +88,20 @@ input{
     position: relative;
 }
 .images__list_avatar {
+    display: flex;
     background-image: url("../images/x2/Ramka.png");
     height : 240px;
     width: 100px;
+    padding: 40px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    margin-left: 60px;
+}
+.images__list_avatar:first-child{
+    opacity: 0.5;
+    background-color: #292a27;
+    width: 100%;
 }
 
 .position__images{
@@ -157,4 +165,28 @@ input{
     color: white;
     font-weight: bold;
     font-size: 24px;
+}
+.imagelist {
+    display: flex;
+}
+.tablenews {
+    background-color: transparent;
+    color: #0cdede;
+    text-transform: uppercase;
+    border: 3px solid red;
+    width: 100%;
+    display: grid;
+    font-size: 20px;
+    font-weight: 800;
+    text-align: initial;
+}
+
+table > td, td {
+    border: 2px solid #22261b;
+    background-color: transparent;
+}
+table > td:hover{
+    background-color: #b1b2b2;
+    opacity: .5;
+    cursor: pointer;
 }

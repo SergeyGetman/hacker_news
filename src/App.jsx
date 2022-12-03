@@ -13,6 +13,7 @@ import {useDispatch} from "react-redux";
 import {setNews} from "./redux/actions";
 import Home from "./components/Home"
 import Time from "./components/Time";
+import Titleid from "./components/Titleid";
 
 function App({props : props} ) {
 
@@ -44,6 +45,7 @@ function App({props : props} ) {
           <Switch>
               <Route exact path='/' component={Home}/>
               <Route exact path='/news' component={Label}/>
+              <Route exact path='/post' component={Titleid} />
           </Switch>
     </div>
         <Time />

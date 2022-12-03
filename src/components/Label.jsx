@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {Redirect} from "react-router-dom";
 import {Imageslist} from "./Imageslist";
+import classes from "./style.module.css"
 
 const Label = () => {
 
@@ -12,7 +13,10 @@ const Label = () => {
     return (
         <div>
             <h1> NEWS </h1>
-            <Imageslist />
+            <div className={classes.imagelist}>
+                <Imageslist />
+            </div>
+
         </div>
     );
 };
