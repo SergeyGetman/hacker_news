@@ -21,7 +21,7 @@ export const Imageslist = () => {
           {arraItems.map((el, i) => {
               return (
 
-                  <div className={classes.images__list_avatar}>
+                  <div key={i} className={classes.images__list_avatar}>
                       <div>
                           <a href={`${url?.url}`}>
                           <img className={classes.images__list} src={el}/>
