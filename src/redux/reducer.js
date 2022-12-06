@@ -4,6 +4,13 @@ const initialState = {
   news: []
 };
 
+export const MOCK_DATA = {
+  number: "Q000000034",
+  customer: 1648,
+  date: "06.12.2022",
+  mockdataTitle : ["Item", "Quanty", "Utin Prise"]
+}
+
 const reducer = (state = initialState, action) => {
 
   switch (action.type) {

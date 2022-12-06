@@ -213,9 +213,8 @@ table > td:hover{
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    height: 916px;
+    height: 100%;
     width: 100%;
-    margin-top: 25rem;
 }
 
 .headerReactangle{
@@ -223,7 +222,7 @@ table > td:hover{
 }
 
 .informBlock {
-    background-color: #d0c6c6;
+    background-color: #ebedea;
     position: relative;
     margin: 858px auto;
     height: 1400px;
@@ -231,7 +230,7 @@ table > td:hover{
 
 .informBlockHeader{
     width: 100%;
-    background-color: #396233;
+    background-color: #ffffff;
     height: 200px;
 }
 .informBlockHeader__title {
@@ -244,6 +243,46 @@ table > td:hover{
     color: #0094D9;
     position: absolute;
     width: 688px;
+}
+
+.inform__block{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 20px auto;
+    height: 116px;
+    width: 100%;
+    border: 5px solid #ed7ae6;
+}
+
+.name__title{
+    width: 500px;
+    height: 100px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 150%;
+    /* identical to box height, or 39px */
+
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    letter-spacing: -0.005em;
+}
+.blockInform{
+    position: absolute;
+    width: 325px;
+    height: 155px;
+    border: 5px solid #ed7ae6;
+    color: white;
+}
+.blockInform__text{
+    font-family: "Droid Sans Mono Slashed";
+    font-size: 30px;
+    line-height: 60px;
+    vertical-align: center;
 }
 
 
