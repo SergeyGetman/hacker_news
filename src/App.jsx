@@ -14,6 +14,7 @@ import {setNews} from "./redux/actions";
 import Home from "./components/Home"
 import Time from "./components/Time";
 import Titleid from "./components/Titleid";
+import Header from "./components/Header";
 
 function App() {
 
@@ -38,12 +39,17 @@ function App() {
                         <li className={classes.reflinks}>
                             <Link to="/post" className={classes.styles_title}>P.O.S.T :</Link>
                         </li>
+                        <li className={classes.reflinks}>
+                            <Link to="/header" className={classes.styles_title}>VERENIA :</Link>
+                        </li>
                     </ul>
 
                     <Switch>
                         <Route exact path='/' component={Home}/>
                         <Route exact path='/news' component={Label}/>
                         <Route exact path='/post' component={Titleid}/>
+                        <Route exact path='/header' component={Header}/>
+
                     </Switch>
                 </div>
                 <Time/>

@@ -104,12 +104,14 @@ input{
     width: 100%;
 }
 
+.images__list_avatar:hover{
+    opacity: 1;
+}
+
 .position__images{
     display: flex;
     margin-top: 400px;
-
 }
-
 
 .close_modal{
     font-size: 30px;
@@ -204,3 +206,44 @@ table > td:hover{
 .newTable th {
     display: table-cell !important;
 }
+
+.header{
+    position: relative;
+    background-image: url("../images/statick/header.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 916px;
+    width: 100%;
+    margin-top: 25rem;
+}
+
+.headerReactangle{
+    position: absolute;
+}
+
+.informBlock {
+    background-color: #d0c6c6;
+    position: relative;
+    margin: 858px auto;
+    height: 1400px;
+}
+
+.informBlockHeader{
+    width: 100%;
+    background-color: #396233;
+    height: 200px;
+}
+.informBlockHeader__title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 51px;
+    margin: 59px 35%;
+    color: #0094D9;
+    position: absolute;
+    width: 688px;
+}
+
+
