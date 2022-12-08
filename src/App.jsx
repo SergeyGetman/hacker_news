@@ -8,13 +8,14 @@ import {
     Route,
     Link
 } from "react-router-dom";
-import {getNewsList} from "./api/request";
+import {getNewData, getNewsList} from "./api/request";
 import {useDispatch} from "react-redux";
-import {setNews} from "./redux/actions";
+import {setNews, getData} from "./redux/actions";
 import Home from "./components/Home"
 import Time from "./components/Time";
 import Titleid from "./components/Titleid";
 import Header from "./components/Header";
+
 
 function App() {
 
@@ -22,7 +23,8 @@ function App() {
 
     useEffect(() => {
         getNewsList().then( list => dispatch(setNews(list)));
-    })
+        getNewData().then(r => dispatch(getData(r)))
+    },[])
 
     return (
         <div>

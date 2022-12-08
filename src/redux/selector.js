@@ -1,2 +1,2 @@
 export const listSelector = state => state.news;
-export const listIds = state => state.ids;
+export const listPhone = state => console.log("this is STATEREDUX", state);

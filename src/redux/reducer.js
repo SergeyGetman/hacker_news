@@ -1,4 +1,4 @@
-import {SET_IDS, SET_NEWS} from "./types";
+import {GET_DATA, SET_IDS, SET_NEWS} from "./types";
 
 const initialState = {
   news: []
@@ -20,6 +20,9 @@ const reducer = (state = initialState, action) => {
 
     case SET_IDS:
       return {...state, ids : action.payload }
+
+    case GET_DATA:
+      return  {...state, data: action.payload}
 
     default:
       return state;

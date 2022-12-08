@@ -1,5 +1,5 @@
 
-import {SET_IDS, SET_NEWS} from "./types";
+import {SET_IDS, SET_NEWS, GET_DATA} from "./types";
 
 
 export const setNews = (news) => ({
@@ -7,7 +7,7 @@ export const setNews = (news) => ({
   payload: news
 })
 
-export const setIds = (ids) => ({
-  type: SET_IDS,
-  payload: ids
+export const getData = (data) => ({
+  type: GET_DATA,
+  payload: data
 })
