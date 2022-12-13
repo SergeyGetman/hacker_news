@@ -8,12 +8,14 @@ import images8 from '../images/x2/ava-8.png'
 import images9 from '../images/x2/ava-9.png'
 import classes from './style.module.css'
 import {useSelector} from "react-redux";
-import {listSelector} from "../redux/selector";
+import {listPhone, listSelector} from "../redux/selector";
 
 
 export const Imageslist = () => {
     const arraItems = [images1,images2,images3,images4,images5,images8, images9]
     const url = useSelector(listSelector)
+    const listPhoneParam = useSelector(listPhone)
+    console.log('this Alexander tutorial',  listPhoneParam)
 
   return (
     <div className={classes.position__images}>

@@ -22,9 +22,24 @@ export const getNewsList = () => {
 }
 
 export const getNewData = () => {
-    const data =  axios.get("https://run.mocky.io/v3/066f2a99-252b-4744-ae58-17382be9c462").then(res => res).then(r =>
-    console.log("this is r", r.data) )
+   return  axios.get("https://run.mocky.io/v3/066f2a99-252b-4744-ae58-17382be9c462") //return Promice
+       .then(res => JSON.parse("res.data")) // JSON PARSE response.data
+       .then(   (r) =>  console.log("THIS IS NEWRES", r))
+       .catch(e => console.error("ERRRROOOOR",e))
+       .finally(r => console.log("finally",r))
+
 }
 getNewData();
+
+
+const setApiNews = () => {
+
+     const newData =  axios.get("https://run.mocky.io/v3/066f2a99-252b-4744-ae58-17382be9c462")
+
+    const newData2 =  axios.get("https://run.mocky.io/v3/066f2a99-252b-4744-ae58-17382be9c462")
+
+}
+
+
 
 
